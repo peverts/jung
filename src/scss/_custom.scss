@@ -8,6 +8,13 @@
   height: 1.5em;
 }
 
+.custom-bg{
+  background-image: url('../../img/dots-reversed-darken.svg');
+  background-size: 45% auto;
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+
 .is-style-subheadline{
   font-size: 1em;
   letter-spacing: 0.3em;
@@ -20,10 +27,54 @@
   font-weight: 200;
   text-transform: none;
 }
+.has-large-font-size{
+  font-size: 2.25em !important;
+}
 
+
+.with-arrows{
+  position: relative;
+  padding: 0 260px;
+  &::before,
+  &::after{
+    content: '';
+    display: block;
+    height: 80px;
+    width: 130px;
+    background-image: url('../../img/arrows-left.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    left: 0;
+    top: calc(50% - 40px);
+  }
+  &::after{
+    background-image: url('../../img/arrows-right.svg');
+    left: inherit;
+    right: 0;
+  }
+}
 
 .connector{
   position: relative;
+}
+
+.slider-arrow{
+  .ghostkit-svg-icon{
+    display: none !important;
+  }
+  border-radius: 0 !important;
+  background-color: $w-color-primary !important;
+  background-image: url("../../img/arrow-left.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 16px auto;
+  height: 40px !important;
+  width: 40px !important;
+  &.slider-arrow-prev{
+    background-image: url("../../img/arrow-right.svg");
+  }
 }
 /*
 .is-style-subheadline-with-line {
@@ -131,6 +182,7 @@
 
 .custom-steps{
   position: relative;
+  z-index: 1;
   &::after{
     content: '';
     position: absolute;
@@ -159,6 +211,17 @@
       .ghostkit-col-content{
         position: relative;
         z-index: 1;
+        .font-glow{
+          font-size: 140px;
+          font-weight: 900;
+          color: #000;
+          text-shadow: 2px 0px 1px $w-color-primary, 2px -2px 1px $w-color-primary, 2px 2px 1px $w-color-primary, -2px -2px 1px $w-color-primary, 0px 0px 6px $w-color-primary, 0px 0px 6px $w-color-primary, 0px 0px 6px $w-color-primary, 0px 0px 6px $w-color-primary;
+          line-height: 0;
+          position: absolute;
+          top: 20%;
+          right: 0;
+          z-index: -1;
+        }
       }
       &::after{
         content: '';
@@ -173,6 +236,10 @@
       &:nth-child(2n){
         .ghostkit-col-content{
           margin-top: 120px;
+          .font-glow{
+            left: 0;
+            right: inherit;
+          }
         }
         &::after{
           right: inherit;
@@ -260,8 +327,24 @@
   }
 }
 .footer{
+  background-image: url("../../img/dots-reversed.svg");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: contain;
+  position: relative;
+  &::before{
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
   .footer-inner{
     background: #fff;
+    position: relative;
+    z-index: 2;
     .col-ansprechpartner{
       position: relative;
       .teaser{
@@ -385,6 +468,9 @@
     font-size: 1.2em;
   }
   */
+  .has-large-font-size{
+    font-size: 1.5em !important;
+  }
 }
 @media(max-width: $w-breakpoint-medium){
   .ghostkit-button{
@@ -410,6 +496,16 @@
   }
   .custom-steps>.ghostkit-grid-inner>.ghostkit-col::after{
     right: -12px;
+  }
+  .has-large-font-size{
+    font-size: 1.2em !important;
+  }
+  .with-arrows{
+    &::before,
+    &::after{
+      display: none;
+    }
+    padding: 0;
   }
 }
 @media(max-width: 768px){
@@ -450,6 +546,9 @@
         }
       }
     }
+  }
+  .custom-bg{
+    background-image: none;
   }
 }
 @media(max-width: $w-breakpoint-small){
