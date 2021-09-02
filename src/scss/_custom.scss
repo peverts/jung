@@ -461,6 +461,15 @@
   }
 }
 
+
+.logo-wall{
+  .wp-block-image{
+    img{
+      max-height: 100px;
+    }
+  }
+}
+
 @media(max-width: $w-breakpoint-large){
   /*
   .is-style-h1, .w-h1, h1{
