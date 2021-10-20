@@ -255,11 +255,19 @@
     border: 1px solid $w-color-primary;
     border-radius: 5px 5px 0 0 !important;
     border-bottom: 0 !important;
+    margin-right: 12px !important;
+    color: #fff !important;
+    &:hover{
+      color: $w-color-primary !important;
+    }
+  }
+  .vp-filter__item-active a{
+    color: $w-color-primary !important;
   }
   &::after{
     content: '';
     display: block;
-    height: 1px;
+    height: 2px;
     width: 75%;
     background: $w-color-primary;
     box-shadow: 0 0 6px 1px #0ea9a1;
