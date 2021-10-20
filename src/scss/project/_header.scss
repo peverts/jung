@@ -134,3 +134,69 @@
         }
     }
 }
+
+.header{
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 5%;
+    .logo-wrapper{
+        max-width: 150px;
+    }
+    .header-item--nav{
+        display: flex;
+        align-items: center;
+        .nav-list{
+            ul{
+                li{
+                    margin-right: 2em;
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                    a{
+                        color: #fff;
+                        font-weight: 200;
+                        font-size: 1.2em;
+                        &:hover{
+                            color: $w-color-primary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .contact-box{
+        padding: 12px 15px;
+        background: #fff;
+        margin-left: 50px;
+        .img-wrapper{
+            max-width: 55px;
+            margin-right: 15px;
+        }
+        .name{
+            color: $w-color-medium;
+            font-weight: 400;
+        }
+        .telefon{
+            color: #000;
+            font-weight: 400;
+            display: block;
+            line-height: 1;
+        }
+        .mail-btn{
+            background: $w-color-primary;
+            height: 50px;
+            width: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 3px;
+            margin-left: 25px;
+            svg{
+                width: 22px;
+            }
+        }
+    }
+}

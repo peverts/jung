@@ -71,7 +71,7 @@ $page_header	= $override_header ?: $global_header;
             </div>
         </div>
         <div class="header-col">
-            <?php include 'tpl/partials/header-nav.php'; ?>
+            <!--<?php include 'tpl/partials/header-nav.php'; ?>-->
             <?php include 'tpl/partials/calltoaction.php'; ?>
             <?php include 'tpl/partials/header-contact.php'; ?>
             <?php include 'tpl/partials/header-lang.php'; ?>
@@ -89,6 +89,6 @@ $page_header	= $override_header ?: $global_header;
                     </svg>
                 </a>
             </div>
-            <?php include 'tpl/partials/header-nav-mobile.php'; ?>
+            <!--<?php include 'tpl/partials/header-nav-mobile.php'; ?>-->
         </div>
 	</header>

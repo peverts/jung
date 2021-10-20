@@ -71,3 +71,133 @@
         }
     }
 }
+
+.footer{
+    background-image: url("../../img/dots-reversed.svg");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: contain;
+    position: relative;
+    &::before{
+        content: '';
+        height: 100%;
+        width: 100%;
+        background: rgba(0,0,0,0.6);
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .footer-inner{
+        background: #fff;
+        position: relative;
+        z-index: 2;
+        .col-ansprechpartner{
+            position: relative;
+            .teaser{
+                background: $w-color-primary;
+                font-weight: 900;
+                display: inline-block;
+                padding: 5px 10px;
+                font-size: 0.9em;
+                position: absolute;
+                top: 25px;
+                left: 25px;
+                z-index: 1;
+            }
+            .img-wrapper{
+                position: relative;
+                &::after{
+                    content: '';
+                    height: 40%;
+                    width: 100%;
+                    bottom: 0;
+                    left: 0;
+                    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+                    position: absolute;
+                }
+            }
+            .content-wrapper{
+                position: absolute;
+                bottom: 25px;
+                left: 25px;
+                z-index: 1;
+                .name{
+                    margin-bottom: 10px;
+                }
+                .bereich{
+                    font-size: 0.9em;
+                    letter-spacing: 0.24em;
+                }
+            }
+            .mail-btn{
+                position: absolute;
+                bottom: 25px;
+                right: 25px;
+                background: $w-color-primary;
+                height: 50px;
+                width: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 3px;
+                svg{
+                    width: 22px;
+                }
+            }
+        }
+        .col-footer-information{
+            padding: 2.5vw 5vw;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .socials{
+                position: absolute;
+                top: 2.5vw;
+                right: 5vw;
+                .social{
+                    .w-svg{
+                        color: #000;
+                    }
+                }
+            }
+            .contact-wrapper{
+                margin-bottom: 30px;
+                .contact{
+                    color: #000;
+                    display: inline-flex;
+                    align-items: flex-start;
+                    font-size: 1.2em;
+                    margin-bottom: 20px;
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                    svg{
+                        flex-shrink: 0;
+                        width: 30px;
+                        max-height: 30px;
+                        margin-top: 5px;
+                        margin-right: 15px;
+                    }
+                }
+            }
+            .meta-footer{
+                color: #000;
+                line-height: 1;
+                font-size: 0.9em;
+                ul{
+                    display: flex;
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                    li{
+                        margin-right: 10px;
+                        &:last-child{
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
