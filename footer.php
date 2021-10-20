@@ -28,7 +28,7 @@ $page_support	= $override_support ?: $global_support;
 // ----------------------------------------------------------------------
 ?>
 
-<footer class="footer">
+<footer class="footer" id="footer">
 	<div class="footer-inner">
 		<div class="uk-grid uk-grid-collapse">
             <?php if($global_contact['zentrale_kontaktperson']) { ?>
