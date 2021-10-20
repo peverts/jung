@@ -276,7 +276,11 @@
     left: 50%;
     transform: translateX(-50%);
   }
-  @media($w-breakpoint-medium){
+  @media(max-width: $w-breakpoint-medium){
+    a{
+      border-radius: 5px !important;
+      margin-bottom: 5px !important;
+    }
     &::after{
       display: none;
     }
