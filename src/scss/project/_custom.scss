@@ -255,7 +255,6 @@
     background: transparent !important;
     border: 2px solid $w-color-primary;
     border-radius: 5px 5px 0 0 !important;
-    border-bottom: 0 !important;
     margin-right: 12px !important;
     color: #fff !important;
     &:hover{
@@ -276,6 +275,11 @@
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
+  }
+  @media($w-breakpoint-medium){
+    &::after{
+      display: none;
+    }
   }
 }
 
