@@ -30,7 +30,7 @@ $page_support	= $override_support ?: $global_support;
 
 <footer class="footer" id="footer">
 	<div class="footer-inner">
-		<div class="uk-grid uk-grid-collapse">
+		<div class="uk-grid uk-grid-collapse" id="kontakt">
             <?php if($global_contact['zentrale_kontaktperson']) { ?>
                 <div class="uk-width-1-3@l col-ansprechpartner">
                     <span class="teaser">Ihr Ansprechpartner</span>
