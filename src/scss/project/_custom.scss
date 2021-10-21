@@ -74,6 +74,8 @@
   .alignwide{
     margin-top: 0 !important;
     margin-bottom: 0 !important;
+    position: relative;
+    z-index: 2;
   }
 }
 
@@ -308,6 +310,22 @@
     transform: translateX(-50%);
   }
   */
+}
+
+//NK-AWB Custom Styles
+.is-style-mit-verlauf{
+  position: relative;
+  &::after{
+    height: 100%;
+    width: 100%;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: linear-gradient(0deg,#000 0,rgba(0,0,0,0) 25%,rgba(0,0,0,0) 75%,#000 100%);
+  }
 }
 
 //CONNECTOR Custom-Styles

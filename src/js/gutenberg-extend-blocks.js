@@ -173,3 +173,9 @@ wp.blocks.registerBlockStyle( 'core/paragraph', {
 	name: 'h6',
 	label: 'H6-Optik'
 } );
+
+//NK/AWB
+wp.blocks.registerBlockStyle( 'nk/awb', {
+	name: 'mit-verlauf',
+	label: 'Mit Verlauf'
+} );
