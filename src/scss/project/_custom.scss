@@ -132,14 +132,23 @@
     &.type-bewertung{
       .post-inner{
         box-shadow: none !important;
+        .post-stars{
+          margin-top: 0;
+          margin-bottom: 5px;
+          color: $w-color-primary;
+        }
+        .post-title{
+          margin-top: 0;
+        }
         img{
           display: block;
           width: 100px;
           margin-right: 25px;
+          border-radius: 100%;
         }
         .content-wrapper{
           p{
-            font-size: 1.46em;
+            font-size: 1.2em;
             text-align: center;
           }
         }
@@ -251,19 +260,27 @@
 .vp-portfolio__layout-elements{
   position: relative;
   margin-bottom: 50px;
+  justify-content: flex-start !important;
+  &.vp-portfolio__layout-elements-bottom{
+    justify-content: center !important;
+  }
   a{
     background: transparent !important;
     border: 2px solid $w-color-primary;
-    border-radius: 5px 5px 0 0 !important;
+    border-radius: 5px !important;
     margin-right: 12px !important;
+    margin-bottom: 8px !important;
     color: #fff !important;
+    text-transform: initial !important;
     &:hover{
       color: $w-color-primary !important;
     }
   }
   .vp-filter__item-active a{
-    color: $w-color-primary !important;
+    color: #fff !important;
+    background: $w-color-primary !important;
   }
+  /*
   &::after{
     content: '';
     display: block;
@@ -276,14 +293,14 @@
     left: 50%;
     transform: translateX(-50%);
   }
-  @media(max-width: $w-breakpoint-medium){
-    a{
-      border-radius: 5px !important;
-      margin-bottom: 5px !important;
-    }
-    &::after{
-      display: none;
-    }
+  */
+}
+
+//CONNECTOR Custom-Styles
+.post--box .post-inner{
+  margin: 40px 0 !important;
+  @media(max-width: $w-breakpoint-large){
+    margin: 30px 0;
   }
 }
 

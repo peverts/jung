@@ -163,7 +163,7 @@ function baw_register_my_cpts() {
 		"query_var" => true,
 		"menu_position" => 20,
 		"menu_icon" => "dashicons-hammer",
-		"supports" => [ "title", "editor", "thumbnail" ],
+		"supports" => [ "title", "editor", "thumbnail", "excerpt" ],
 		"taxonomies" => [ "location", "target", "funnel" ],
 		"show_in_graphql" => false,
 	];

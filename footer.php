@@ -28,28 +28,32 @@ $page_support	= $override_support ?: $global_support;
 // ----------------------------------------------------------------------
 ?>
 
+<?php
+    $shuffledArray = $global_contact['ansprechpartner'][array_rand($global_contact['ansprechpartner'])];
+?>
+
 <footer class="footer" id="footer">
 	<div class="footer-inner">
 		<div class="uk-grid uk-grid-collapse" id="kontakt">
-            <?php if($global_contact['zentrale_kontaktperson']) { ?>
-                <div class="uk-width-1-3@l col-ansprechpartner">
-                    <span class="teaser">Ihr Ansprechpartner</span>
-                    <div class="img-wrapper">
-                        <img src="<?= $global_contact['zentrale_kontaktperson']['bild_gross']['url']; ?>" alt="" />
-                    </div>
-                    <div class="content-wrapper">
-                        <?php $social_profiles = $global_contact['zentrale_kontaktperson']['socials'];
-                        include 'tpl/partials/social.php'; ?>
-                        <h3 class="is-style-h3 name"><?= $global_contact['zentrale_kontaktperson']['name']; ?></h3>
-                        <span class="bereich"><?= $global_contact['zentrale_kontaktperson']['bereich']; ?></span>
-                    </div>
-                    <a class="mail-btn" href="mailto:<?= $global_contact['zentrale_kontaktperson']['e-mail']; ?>">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="15.411" viewBox="0 0 22 15.411">
-                            <path id="mail" d="M4.031,19.146a1.643,1.643,0,0,0,.719.164h16.5a1.643,1.643,0,0,0,.719-.164l-6.5-6.117L13.35,14.775a.55.55,0,0,1-.7,0l-2.119-1.745-6.5,6.117Zm-.774-.781.016-.015,6.4-6.025L3.3,7.075q-.021-.017-.04-.036A1.644,1.644,0,0,0,3.1,7.75v9.911a1.644,1.644,0,0,0,.157.7Zm19.485,0a1.644,1.644,0,0,0,.157-.7V7.75a1.644,1.644,0,0,0-.161-.711q-.019.019-.04.036l-6.375,5.25,6.4,6.025.016.015ZM21.959,6.26a1.644,1.644,0,0,0-.709-.16H4.75a1.644,1.644,0,0,0-.709.16L13,13.637,21.959,6.26ZM4.75,5h16.5A2.75,2.75,0,0,1,24,7.75v9.911a2.75,2.75,0,0,1-2.75,2.75H4.75A2.75,2.75,0,0,1,2,17.661V7.75A2.75,2.75,0,0,1,4.75,5Z" transform="translate(-2 -5)" fill="#fff"/>
-                        </svg>
-                    </a>
+            <div class="uk-width-1-3@l col-ansprechpartner">
+                <span class="teaser">Ihr Ansprechpartner</span>
+                <div class="img-wrapper">
+                    <img src="<?= $shuffledArray['bild']['url']; ?>" alt="" />
                 </div>
-            <?php } ?>
+                <div class="content-wrapper">
+                    <!--
+                    <?php $social_profiles = $global_contact['zentrale_kontaktperson']['socials'];
+                    include 'tpl/partials/social.php'; ?>
+                    -->
+                    <h3 class="is-style-h3 name"><?= $shuffledArray['name']; ?></h3>
+                    <span class="bereich"><?= $shuffledArray['bereich']; ?></span>
+                </div>
+                <a class="mail-btn" href="mailto:<?= $shuffledArray['e-mail']; ?>">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="15.411" viewBox="0 0 22 15.411">
+                        <path id="mail" d="M4.031,19.146a1.643,1.643,0,0,0,.719.164h16.5a1.643,1.643,0,0,0,.719-.164l-6.5-6.117L13.35,14.775a.55.55,0,0,1-.7,0l-2.119-1.745-6.5,6.117Zm-.774-.781.016-.015,6.4-6.025L3.3,7.075q-.021-.017-.04-.036A1.644,1.644,0,0,0,3.1,7.75v9.911a1.644,1.644,0,0,0,.157.7Zm19.485,0a1.644,1.644,0,0,0,.157-.7V7.75a1.644,1.644,0,0,0-.161-.711q-.019.019-.04.036l-6.375,5.25,6.4,6.025.016.015ZM21.959,6.26a1.644,1.644,0,0,0-.709-.16H4.75a1.644,1.644,0,0,0-.709.16L13,13.637,21.959,6.26ZM4.75,5h16.5A2.75,2.75,0,0,1,24,7.75v9.911a2.75,2.75,0,0,1-2.75,2.75H4.75A2.75,2.75,0,0,1,2,17.661V7.75A2.75,2.75,0,0,1,4.75,5Z" transform="translate(-2 -5)" fill="#fff"/>
+                    </svg>
+                </a>
+            </div>
             <div class="uk-width-2-3@l col-footer-information">
                 <div class="socials">
                     <?php $social_profiles = $global_social;
@@ -81,7 +85,7 @@ $page_support	= $override_support ?: $global_support;
                               <path id="pin" d="M15.095,20.772a8.9,8.9,0,1,1,1.619,0v10.56a.809.809,0,1,1-1.619,0V20.772ZM15.9,19.19A7.285,7.285,0,1,0,8.619,11.9,7.285,7.285,0,0,0,15.9,19.19Z" transform="translate(-7 -3)" fill="#0ea9a1"/>
                             </svg>
                             <?= $global_contact['firmenname']; ?> <br />
-                            <?= $global_contact['anschrift']['strasse']; ?>, <?= $global_contact['anschrift']['plz']; ?><?= $global_contact['anschrift']['ort']; ?>
+                            <?= $global_contact['anschrift']['strasse']; ?>, <?= $global_contact['anschrift']['plz']; ?> <?= $global_contact['anschrift']['ort']; ?>
                         </span>
                     </div>
                 </div>

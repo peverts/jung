@@ -45,7 +45,6 @@ if($stars) {
                     <?php the_post_thumbnail(); ?>
                 <?php } ?>
                 <header class="post-header">
-                    <!--
                     <p class="post-stars">
                         <?php if($stars) { ?>
                             <?php for($i=0; $i<$full_stars; $i++) { ?>
@@ -56,7 +55,6 @@ if($stars) {
                             <?= baw_svg('solid/star-half-alt') ?>
                         <?php } ?>
                     </p>
-                    -->
                     <p class="post-title">
                         <strong><?= get_the_title() ?></strong>
                         <br />
