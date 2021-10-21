@@ -280,6 +280,20 @@
     color: #fff !important;
     background: $w-color-primary !important;
   }
+  .vp-pagination__load-more{
+    background: $w-color-primary !important;
+    border-radius: 0 !important;
+    border: 0 !important;
+    color: #fff !important;
+    font-size: 1.13em !important;
+    font-weight: 400 !important;
+    padding: 1em 1.4em !important;
+    transition: all .3s !important;
+    &:hover{
+      color: #fff !important;
+      background: lighten($w-color-primary, 10%) !important;
+    }
+  }
   /*
   &::after{
     content: '';
