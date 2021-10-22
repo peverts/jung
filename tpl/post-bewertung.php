@@ -27,6 +27,16 @@ if($stars) {
 
 <article <?php post_class('post post--box'); ?> id="post-<?php the_ID(); ?>">
 	<div class="post-inner">
+        <p class="post-stars">
+            <?php if($stars) { ?>
+                <?php for($i=0; $i<$full_stars; $i++) { ?>
+                    <?= baw_svg('solid/star') ?>
+                <?php } ?>
+            <?php } ?>
+            <?php if($half_star) { ?>
+                <?= baw_svg('solid/star-half-alt') ?>
+            <?php } ?>
+        </p>
 		<div class="post-content">
 			<?php if(! $hide_descr) { ?>
                 <div class="content-wrapper">
@@ -45,16 +55,6 @@ if($stars) {
                     <?php the_post_thumbnail(); ?>
                 <?php } ?>
                 <header class="post-header">
-                    <p class="post-stars">
-                        <?php if($stars) { ?>
-                            <?php for($i=0; $i<$full_stars; $i++) { ?>
-                                <?= baw_svg('solid/star') ?>
-                            <?php } ?>
-                        <?php } ?>
-                        <?php if($half_star) { ?>
-                            <?= baw_svg('solid/star-half-alt') ?>
-                        <?php } ?>
-                    </p>
                     <p class="post-title">
                         <strong><?= get_the_title() ?></strong>
                         <br />
