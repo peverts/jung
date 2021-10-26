@@ -356,6 +356,7 @@
 .group-hero{
   margin-top: 0;
   position: relative;
+  overflow: hidden;
    > .wp-block-group__inner-container{
      margin: 0 !important;
      width: 100%;
@@ -363,6 +364,7 @@
      position: relative;
      display: flex;
      align-items: center;
+     overflow: hidden;
     .wp-block-group{
       margin-top: 0;
       margin-bottom: 0;
@@ -388,6 +390,7 @@
       height: 100%;
       width: 100%;
       transform: translate(-50%, -50%);
+      overflow: hidden;
       video{
         object-fit: cover;
         height: 100%;
