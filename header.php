@@ -79,7 +79,7 @@ $page_header	= $override_header ?: $global_header;
                 <?php include 'tpl/partials/calltoaction.php'; ?>
                 <?php include 'tpl/partials/header-contact.php'; ?>
                 <?php include 'tpl/partials/header-lang.php'; ?>
-                <div class="contact-box uk-flex uk-flex-middle uk-visible@l">
+                <div class="contact-box uk-flex uk-flex-middle uk-visible@s">
                     <div class="img-wrapper">
                         <img src="<?= $global_contact['zentrale_kontaktperson_header']['bild']['url']; ?>" alt="" />
                     </div>
@@ -97,3 +97,7 @@ $page_header	= $override_header ?: $global_header;
             </div>
         </div>
 	</header>
+
+    <a href="tel:<?= $global_contact['zentrale_kontaktperson_header']['telefonnummer']; ?>" class="jetzt-anrufen uk-hidden@s">
+        <?= baw_svg('solid/phone-alt'); ?>
+    </a>
