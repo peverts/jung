@@ -356,52 +356,70 @@
 .group-hero{
   margin-top: 0;
   position: relative;
-  overflow: hidden;
    > .wp-block-group__inner-container{
-    margin: 0 !important;
-    width: 100%;
-    position: relative;
+     margin: 0 !important;
+     width: 100%;
+     min-height: 100vh;
+     position: relative;
+     display: flex;
+     align-items: center;
+     @media(max-width: $w-breakpoint-small){
+       min-height: 75vh;
+       align-items: flex-end;
+     }
     .wp-block-group{
       margin-top: 0;
       margin-bottom: 0;
+      position: relative;
+      z-index: 5;
+      padding: 100px 0;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      /*
       position: absolute;
       left: 5%;
       top: 50%;
       transform: translateY(-50%);
       z-index: 3;
-      @media(max-width: $w-breakpoint-small){
-        position: unset;
-        left: inherit;
-        top: inherit;
-        transform: none;
-      }
+      */
     }
     .wp-block-video{
       margin: 0;
-      position: relative;
-      &::before{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      height: 100%;
+      width: 100%;
+      transform: translate(-50%, -50%);
+      video{
+        object-fit: cover;
         height: 100%;
         width: 100%;
-        content: '';
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        background: rgba(0,0,0,0.3);
-      }
-      &::after{
-        height: 100%;
-        width: 100%;
-        content: '';
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 2;
-        background: linear-gradient(0deg,#000 0,rgba(0,0,0,0) 25%,rgba(0,0,0,0) 75%,#000 100%);
       }
     }
+  }
+  &::before{
+    height: 100%;
+    width: 100%;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: rgba(0,0,0,0.3);
+  }
+  &::after{
+    height: 100%;
+    width: 100%;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: linear-gradient(0deg,#000 0,rgba(0,0,0,0) 25%,rgba(0,0,0,0) 75%,#000 100%);
   }
 }
 
