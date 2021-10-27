@@ -73,20 +73,11 @@
 }
 
 .footer{
-    background-image: url("../../img/dots-reversed.svg");
+    background-image: url("../../img/dots-reversed-darken.jpg");
     background-repeat: no-repeat;
     background-position: right bottom;
     background-size: contain;
     position: relative;
-    &::before{
-        content: '';
-        height: 100%;
-        width: 100%;
-        background: rgba(0,0,0,0.6);
-        position: absolute;
-        top: 0;
-        right: 0;
-    }
     .footer-inner{
         background: #fff;
         position: relative;
