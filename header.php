@@ -54,8 +54,8 @@ $page_header	= $override_header ?: $global_header;
 
 
 <body <?php body_class('w-body'); ?>>
-    <!--
-	<?php if($page_header['show_socialmedia'] && $global_social) { ?>
+
+	<?php /* if($page_header['show_socialmedia'] && $global_social) { ?>
 		<div class="header-meta">
 			<div class="header-meta-inner">
 				<div class="header-meta-item">
@@ -64,8 +64,8 @@ $page_header	= $override_header ?: $global_header;
 				</div>
 			</div>
 		</div>
-	<?php } ?>
-	-->
+	<?php } */?>
+
 	<header class="header header--sticky" id="header" role="banner">
         <div class="alignwide uk-flex uk-flex-between uk-flex-middle">
             <div class="header-col">
@@ -75,7 +75,7 @@ $page_header	= $override_header ?: $global_header;
                 </div>
             </div>
             <div class="header-col">
-                <!--<?php include 'tpl/partials/header-nav.php'; ?>-->
+                <?php /* include 'tpl/partials/header-nav.php';  */?>
                 <?php include 'tpl/partials/calltoaction.php'; ?>
                 <?php include 'tpl/partials/header-contact.php'; ?>
                 <?php include 'tpl/partials/header-lang.php'; ?>
@@ -93,7 +93,7 @@ $page_header	= $override_header ?: $global_header;
                         </svg>
                     </a>
                 </div>
-                <!--<?php include 'tpl/partials/header-nav-mobile.php'; ?>-->
+                <?php /* include 'tpl/partials/header-nav-mobile.php'; */ ?>
             </div>
         </div>
 	</header>
