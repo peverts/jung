@@ -498,6 +498,16 @@
   }
 }
 @media(max-width: 768px){
+  .ghostkit-custom-GNcho{
+    min-height: inherit !important;
+    height: 260px;
+    .nk-awb-wrap{
+      min-height: inherit !important;
+    }
+    .ghostkit-button-wrapper{
+      display: none !important;
+    }
+  }
   .custom-steps{
     &::after,
     &::before{
@@ -541,16 +551,6 @@
   }
 }
 @media(max-width: $w-breakpoint-small){
-  .ghostkit-custom-GNcho{
-    min-height: inherit !important;
-    height: 260px;
-    .nk-awb-wrap{
-      min-height: inherit !important;
-    }
-    .ghostkit-button-wrapper{
-      display: none !important;
-    }
-  }
   .hero{
     height: 500px;
   }
