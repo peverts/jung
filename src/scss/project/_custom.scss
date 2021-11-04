@@ -309,6 +309,16 @@
     background: linear-gradient(0deg,#000 0,rgba(0,0,0,0) 25%,rgba(0,0,0,0) 75%,#000 100%);
   }
 }
+.ghostkit-custom-GNcho{
+  min-height: inherit;
+  height: 75vh;
+  @media(max-width: $w-breakpoint-small){
+    height: 360px;
+    .ghostkit-button-wrapper{
+      display: none;
+    }
+  }
+}
 
 //CONNECTOR Custom-Styles
 .post--box .post-inner{
@@ -433,10 +443,6 @@
     width: inherit;
     padding: 0.8em 1em;
   }
-  .ghostkit-custom-GNcho{
-    min-height: inherit;
-    height: 500px;
-  }
   .connector .post.type-bewertung .post-inner{
     text-align: center;
     .content-wrapper p{
@@ -469,21 +475,6 @@
   }
 }
 @media(max-width: 768px){
-  .ghostkit-custom-GNcho{
-    min-height: inherit !important;
-    height: 260px !important;
-    .nk-awb-wrap{
-      min-height: inherit !important;
-      height: 260px !important;
-      .nk-awb-inner{
-        min-height: inherit !important;
-        height: 260px !important;
-      }
-    }
-    .ghostkit-button-wrapper{
-      display: none !important;
-    }
-  }
   .custom-steps{
     &::after,
     &::before{
