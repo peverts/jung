@@ -1,6 +1,4 @@
-body{
-  overflow-x: hidden;
-}
+
 
 .img-wrapper img{
   width: 100%;
@@ -534,6 +532,9 @@ body{
   }
 }
 @media(max-width: $w-breakpoint-small){
+  main{
+    overflow-x: hidden;
+  }
   #block_612ca7ecdbce1{
     padding: 0 !important;
     .slider-arrow{
