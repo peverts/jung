@@ -48,6 +48,20 @@ jQuery(document).ready(function () {
         }, 1);
     }
 
+    MicroModal.init({
+        openTrigger: 'data-custom-open',
+    });
+
+    jQuery('[data-custom-open="dyn-modal"]').click(function() {
+        var title = jQuery(this).data('title');
+        var subtitle = jQuery(this).data('subtitle');
+        var content = decodeURIComponent(jQuery(this).data('content').replace(/\+/g, ' '));
+
+        jQuery('#dyn-modal-title').empty().append(title);
+        jQuery('#dyn-modal-subtitle').empty().append(subtitle);
+        jQuery('#dyn-modal-content').empty().append(content);
+    });
+
     // -----------------------------------------------
     // -----------------------------------------------
     // ANCHOR LINKS

@@ -133,6 +133,28 @@ $page_support	= $override_support ?: $global_support;
 	</div>
 </footer>
 
+
+<div class="modal micromodal-slide" id="dyn-modal" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="dyn-modal-title">
+            <header class="modal__header">
+                <p>
+                    <strong class="modal__title" id="dyn-modal-title"></strong>
+                    <span class="modal__title" id="dyn-modal-subtitle"></span>
+                </p>
+                <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+            </header>
+            <main class="modal__content" id="dyn-modal-content">
+            </main>
+            <?php /*
+            <footer class="modal__footer">
+                <button class="w-btn">Continue</button>
+                <button class="w-btn" data-micromodal-close aria-label="Close this dialog window">Close</button>
+            </footer> */ ?>
+        </div>
+    </div>
+</div>
+
 <?php
 include 'tpl/partials/offcanvas.php';
 wp_footer() ;

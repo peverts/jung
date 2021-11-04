@@ -37,6 +37,7 @@
     "gulp-uglify": "^3.0.2",
     "hamburgers": "latest",
     "hiraku": "latest",
+    "micromodal": "^0.4.6",
     "scrollreveal": "latest",
     "swiper": "latest",
     "uikit": "latest"

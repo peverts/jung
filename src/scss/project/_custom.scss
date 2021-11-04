@@ -126,6 +126,18 @@
     &.type-bewertung{
       .post-inner{
         box-shadow: none !important;
+        /*
+        a{
+          display: inline-block;
+          padding: 10px 15px;
+          margin-top: 10px;
+          background: $w-color-primary;
+          color: #fff;
+          &:hover{
+            background: lighten($w-color-primary, 10%);
+          }
+        }
+        */
         .post-stars{
           margin-top: 0;
           margin-bottom: 5px;
@@ -313,7 +325,7 @@
   min-height: inherit;
   height: 75vh;
   @media(max-width: $w-breakpoint-small){
-    height: 360px;
+    height: 260px;
     .ghostkit-button-wrapper{
       display: none;
     }
