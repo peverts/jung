@@ -40,13 +40,7 @@ if($stars) {
 		<div class="post-content">
 			<?php if(! $hide_descr) { ?>
                 <div class="content-wrapper">
-                    <?php
-                    if($data['text']) {
-                        echo $data['text'];
-                    } elseif(has_excerpt()) {
-                        the_excerpt();
-                    }
-                    ?>
+                    <?php the_excerpt(); ?>
                     <p style="text-align: center; font-weight: 500; font-size: 1.1em;"><a data-custom-open="dyn-modal" data-content="<?= urlencode($data['text']) ?>" data-title="<?= get_the_title() ?>" data-subtitle="<?= $data['subheadline'] ?>">weiterlesen</a></p>
                 </div>
 			<?php } ?>
